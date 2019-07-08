@@ -38,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                OkHttpClient okHttpClient = new OkHttpClient();
+                OkHttpClient client = new OkHttpClient();
                 Request request = new Request.Builder()
                         .url("https://github.com")
                         .build();
                 try {
-                    Response response = okHttpClient.newCall(request).execute();
+                    Response response = client.newCall(request).execute();
                     String responseData = response.body().string();
                     showResponse(responseData);
                 } catch (IOException e) {

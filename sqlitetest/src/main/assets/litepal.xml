@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<litepal>
+    <dbname value="LitePalTest" ></dbname>
+    <version value="1">
+        //每次对表的更新，添加都要在value的值上加1
+    </version>
+    <list>
+        //每个新建的表都要放在这里，以自己的包名.类名
+       <mapping class="com.example.sqlitetest.Litepaltable"></mapping>
+    </list>
+</litepal>
